@@ -1,0 +1,713 @@
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #151515;
+}
+
+.button {
+    display: block;
+    padding: 23px 0;
+    text-align: center;
+    background-color: #151515;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/*----------------------- HEADER ---------------------*/
+.header {
+    background-color: #151515;
+    color: #fff;
+}
+
+.header-main {
+    background-color: transparent;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    align-items: flex-end;
+}
+
+.header__logo {
+    position: relative;
+    z-index: 15;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 0 35px;
+}
+
+.header__nav-item--active {
+    color: #0066FF;
+}
+
+.header__nav-link {
+    text-transform: uppercase;
+}
+
+.header__body {
+    padding-top: 152px;
+}
+
+/*---------------------- MAIN --------------------*/
+.main {
+    flex-grow: 1;
+}
+
+.about-us,
+.lease-work,
+.video,
+.important {
+    padding-top: 150px;
+}
+
+/*---------------------- TOP --------------------*/
+.top {
+    color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    margin-top: 247px;
+}
+
+.top__btn {
+    display: block;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 auto;
+    max-width: 430px;
+}
+
+.top__title {
+    text-align: center;
+    font-size: 96px;
+    font-weight: 700;
+    margin-bottom: 38px;
+}
+
+/*------------------------ SLIDER ----------------------*/
+.slider-wrapper::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(21, 21, 21, .6);
+}
+
+.slider-slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.swiper-pagination-bullet {
+    width: 120px;
+    height: 3px;
+    border-radius: 0;
+    background: #151515;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #FFF;
+    height: 6px;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 15px 32px;
+}
+
+/*---------------------- ABOUT-US ---------------------*/
+.section-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.about-us__title {
+    margin-bottom: 50px;
+}
+
+.about-us__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 40px;
+}
+
+.about-us__item {
+    text-align: center;
+}
+
+.about-us__img {
+    margin-bottom: 30px;
+}
+
+.about-us__subtitle {
+    margin-bottom: 30px;
+}
+
+.about-us__text {
+    text-align: left;
+    line-height: 130%;
+}
+
+/*---------------------- LEASE-WORK ----------------------*/
+.lease-work__inner {
+    max-width: 594px;
+    margin: 0 auto;
+}
+
+.lease-work__title {
+    margin-bottom: 50px;
+}
+
+.lease-work__text {
+    line-height: 130%;
+    margin: 0 7px 50px;
+}
+
+.lease-work__subtitle {
+    margin: 0 7px 50px;
+}
+
+.lease-work__list {
+    list-style-type: none;
+    margin-bottom: 70px;
+    counter-reset: myCounter;
+}
+
+.lease-work__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 140px;
+    counter-increment: myCounter;
+}
+
+.lease-work__item+.lease-work__item {
+    margin-top: 40px;
+}
+
+.lease-work__item::before {
+    content: counter(myCounter);
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #0066FF;
+    border-radius: 50%;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lease-work__item-text {
+    max-width: 270px;
+    line-height: 130%;
+    margin-right: 7px;
+}
+
+.lease-work__text--last {
+    margin-bottom: 0;
+}
+
+/*---------------------- VIDEO ----------------------*/
+.video__title {
+    margin-bottom: 20px;
+}
+
+.video__subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.video__content {
+    display: block;
+    margin: 0 auto;
+}
+
+/*---------------------- IMPORTANT ----------------------*/
+.important {
+    padding-bottom: 150px;
+}
+
+.important__title {
+    margin-bottom: 20px;
+}
+
+.important__text {
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 130%;
+    margin-bottom: 50px;
+}
+
+.important__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 40px;
+}
+
+.important__item-img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.important__item-text {
+    line-height: 130%;
+}
+
+/*---------------------- CONTACTS ----------------------*/
+.contacts {
+    padding-top: 100px;
+}
+
+.contacts__title {
+    margin-bottom: 20px;
+}
+
+.contacts__subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form {
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.form__input {
+    width: 270px;
+    height: 57px;
+    padding: 18px 20px;
+    border: 1px solid #0066FF;
+    margin-bottom: 50px;
+}
+
+.form__text-input {
+    margin-right: 35px;
+}
+
+.form__text-input::placeholder,
+.form__mail-input::placeholder,
+.form__textarea::placeholder {
+    line-height: 130%;
+    color: rgba(21, 21, 21, .5);
+}
+
+.form__textarea {
+    width: 100%;
+    border: 1px solid #0066FF;
+    height: 291px;
+    padding: 28px 20px;
+    resize: none;
+}
+
+.form__btn {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    padding: 13px 61px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+/*---------------------- BLOG ----------------------*/
+.blog {
+    padding: 150px 0;
+}
+
+.blog__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 40px;
+    margin-bottom: 70px;
+}
+
+.blog__item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0 54px;
+}
+
+.blog__item-img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.blog__item-link {
+    color: #fff;
+    background-color: #0066FF;
+    line-height: 130%;
+    padding: 4px 20px;
+}
+
+.blog__btn {
+    max-width: 223px;
+    padding: 13px 61px;
+    margin: 0 auto;
+}
+
+/*---------------------- CHOOSE CARS ----------------------*/
+.choose-cars {
+    padding-top: 100px;
+}
+
+.choose-cars__title {
+    margin-bottom: 50px;
+}
+
+.choose-cars__list {
+    display: flex;
+    justify-content: center;
+    gap: 0 80px;
+}
+
+.choose-cars__item-btn {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+
+.choose-cars__item-btn--active {
+    color: #0066FF;
+}
+
+.cars__list {
+    display: none;
+}
+
+.cars__list--active {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px 40px;
+}
+
+.car {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 0;
+    border: 1px solid #0066FF;
+}
+
+.car-img {
+    width: 100%;
+    border-bottom: 1px solid #0066FF;
+}
+
+.car__price {
+    line-height: 130%;
+}
+
+.car__link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #0066FF;
+    color: #0066FF;
+    line-height: 130%;
+}
+
+.choose-cars__btn {
+    display: block;
+    padding: 13px 61px;
+    margin: 70px auto 0;
+    max-width: 223px;
+}
+
+/*---------------------- FOOTER ----------------------*/
+.footer {
+    background-color: #151515;
+    color: #fff;
+}
+
+.footer__inner {
+    padding: 50px 0 32px;
+}
+
+.footer__nav-list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.footer__nav-item {
+    max-width: 225px;
+}
+
+.footer__title {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.footer__nav-link {
+    display: block;
+    text-align: left;
+    line-height: 130%;
+}
+
+.footer__nav-link+.footer__nav-link {
+    margin-top: 20px;
+}
+
+.footer__apps {
+    display: flex;
+    justify-content: center;
+    gap: 0 39px;
+    margin-bottom: 50px;
+}
+
+.footer__info {
+    max-width: 806px;
+    margin: 0 auto 30px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer__text a {
+    border-bottom: 1px solid #fff;
+}
+
+.footer__row-list {
+    display: flex;
+    justify-content: center;
+    gap: 0 40px;
+}
+
+@media (max-width: 1250px) {
+    .cars__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .blog__item {
+        flex-direction: column;
+        gap: 10px 0;
+    }
+    .blog__item-img {
+        margin-bottom: 0;
+    }
+    .blog__subtitle {
+        font-size: 18px;
+    }
+    .blog__item-link {
+        align-self: flex-end;
+        max-width: 80px;
+    }
+}
+@media (max-width: 1050px) {
+
+    .video__content {
+        width: 600px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .about-us,
+    .lease-work,
+    .video,
+    .important,
+    .choose-cars,
+    .blog {
+        padding-top: 50px;
+    }
+
+    .section-title {
+        font-size: 38px;
+    }
+
+    .header__nav-btn {
+        position: relative;
+        z-index: 15;
+        width: 30px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .header__nav-btn span {
+        width: 100%;
+        background-color: #fff;
+        height: 3px;
+    }
+
+    .header__nav-list {
+        position: absolute;
+        z-index: 10;
+        background-color: #151515;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 100px;
+        text-align: center;
+        transform: translateX(-100%);
+        transition: transform .3s;
+    }
+
+    .header__nav-list--active {
+        transform: translateX(0%);
+    }
+
+    .top__title {
+        font-size: 70px;
+    }
+
+    .top__btn {
+        font-size: 30px;
+        max-width: 320px;
+    }
+
+    .about-us__list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+    .choose-cars__list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .choose-cars__title {
+        margin-bottom: 30px;
+    }
+    .choose-cars__item-btn {
+        margin-bottom: 20px;
+    }
+    .cars__list {
+        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .choose-cars__btn {
+        margin: 30px auto 0;
+    }
+    .blog {
+        padding-bottom: 50px;
+    }
+    .blog__list {
+        margin-bottom: 30px;
+    }
+    .contacts {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 650px) {
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 7px 32px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 70px;
+    }
+
+    .swiper-pagination-bullet-active {
+        height: 4px;
+    }
+
+    .about-us__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .video__content {
+        width: 510px;
+        height: 255px;
+    }
+    .important__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer__nav-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    .blog__list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px 0;
+    }
+    .form__input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .swiper-pagination-bullet {
+        width: 40px;
+    }
+    .about-us__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .lease-work__subtitle {
+        margin: 0 7px 20px;
+    }
+    .lease-work__item {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px 40px;
+    }
+    .video__content {
+        width: 100%;
+    }
+    .important {
+        padding-bottom: 50px;
+    }
+    .important__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer__nav-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer__apps {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px 0;
+    }
+    .footer__row-list {
+        flex-direction: column;
+        gap: 10px 0;
+    }
+    .cars__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
